@@ -23,7 +23,7 @@ def login_view(request):
         return redirect('/')
 
     if request.method == 'POST':
-        form = LoginForm(requst.post)
+        form = LoginForm(request.post)
 
         if form.is_valid():
             user= form.cleaned_data.get('user')
