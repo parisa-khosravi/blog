@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Detail</Details></title>
+</head>
+<body>
+        <div>
+        <p>{{profile}}</p>
+        <p>{{profile.first_name}}</p>
+        <p>{{profile.last_name}}</p>
+        {% if profile.avatar%}
+            <img src="{{ profile.avatar.url}}" alt="Avatar">
+        {% endif%}
+        <p>{{profile.github_link}}</p>
+        <p>{{profile.address}}</p>
+        </div>
+</body>
+</html>
