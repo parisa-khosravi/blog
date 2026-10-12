@@ -10,7 +10,7 @@ class ProfileEditView(LoginRequiredMixin,UpdateView):
     form_class = ProfileEditForm
     template_name = 'user/profile_edit.html'
     succes_url = reverse_lazy('user:profile-edit')
-    login_url = 'account/login.html'
+    login_url = 'account/login'
 
     def get_object(self, queryset=None):
         return self.request.user.profile

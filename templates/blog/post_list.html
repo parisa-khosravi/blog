@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post lists</title>
+</head>
+<body>
+    {% for post in posts %}
+    {{post}}
+    {{post.author}}
+    {% for cat in post.category.all %}
+    <li>
+        <a> {{ cat.name}}</a> {% if not forloop.last %},{% endif %}
+    </li>
+    {% endfor %}
+</body>
+</html>
